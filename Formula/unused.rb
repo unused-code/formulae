@@ -3,6 +3,7 @@ class Unused < Formula
   homepage "https://unused.codes"
   url "https://github.com/unused-code/unused/archive/0.2.0.tar.gz"
   sha256 "64951b3b2d57f46c75f5f166f0d4180f88af4d4362710ff23830c8d65168f4f4"
+  head "https://github.com/unused-code/unused.git"
 
   depends_on "cmake" => :build
   depends_on "rust" => :build
