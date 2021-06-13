@@ -8,8 +8,14 @@ class Unused < Formula
   depends_on "cmake" => :build
   depends_on "rust" => :build
 
+  option "without-mimalloc", "Use Rust's default allocator (may reduce performance)"
+
   def install
-    system "cargo", "install", "--locked", "--root", prefix, "--path", "."
+    if build.with? "mimalloc"
+      system "cargo", "install", "--locked", "--root", prefix, "--path", ".", "--features", "mimalloc"
+    else
+      system "cargo", "install", "--locked", "--root", prefix, "--path", "."
+    end
   end
 
   test do
