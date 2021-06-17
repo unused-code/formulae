@@ -20,7 +20,7 @@ class Unused < Formula
 
   test do
     shell_output("git init .")
-    code = testpath/"awesome.rb"
+    code = testpath / "awesome.rb"
     code.write <<~EOS
       class Awesome
         def once
@@ -33,7 +33,7 @@ class Unused < Formula
       end
     EOS
 
-    tags = testpath/".git/tags"
+    tags = testpath / ".git/tags"
     tags.write <<~EOS
       !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
       !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
@@ -49,7 +49,7 @@ class Unused < Formula
       twice	../awesome.rb	/^  def twice$/;"	f	class:Awesome
     EOS
 
-    spec = testpath/"spec/awesome_spec.rb"
+    spec = testpath / "spec/awesome_spec.rb"
     spec.write <<~EOS
       require "spec_helper"
 
