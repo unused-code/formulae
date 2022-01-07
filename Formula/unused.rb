@@ -1,8 +1,8 @@
 class Unused < Formula
   desc "Identify potentially unused code"
   homepage "https://unused.codes"
-  url "https://github.com/unused-code/unused/archive/0.3.0.tar.gz"
-  sha256 "dc11980a0c945e392c42b21c08639514ee731fb65d2675a0ead3070d6f824a0c"
+  url "https://github.com/unused-code/unused/archive/0.3.1.tar.gz"
+  sha256 "46650c94e8c58e75d9b684d237a8286163372187858280e4c248154359b70f15"
   head "https://github.com/unused-code/unused.git", branch: "main"
 
   depends_on "cmake" => :build
