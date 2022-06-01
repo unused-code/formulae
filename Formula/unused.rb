@@ -8,7 +8,7 @@ class Unused < Formula
   depends_on "cmake" => :build
   depends_on "rust" => :build
 
-  option "without-mimalloc", "Use Rust's default allocator (may reduce performance)"
+  option "with-mimalloc", "Use MiMalloc allocator (Intel-only, may improve performance)"
 
   def install
     if build.with? "mimalloc"
